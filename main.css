@@ -1,0 +1,84 @@
+*{
+    padding:0;
+    margin:0;
+}
+#game{
+    border: 1px black solid;
+    width: 800px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    overflow: hidden hidden;
+    background-image: url(image/game_background2.jpg);
+    background-repeat: repeat-x;
+    animation: natureMove 12s linear infinite;
+}
+
+#square {
+
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top:50px;
+    left: 30px;
+    background-color: blue;
+    opacity: 0;
+    
+}
+
+#bild{
+    
+    background-image: url(image/bear_ex4.gif);
+    width: 75px;
+    height:133px;
+    background-position-x: -20px;
+    background-position-y: -10px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 357px;
+    left: 200px;
+    
+}
+
+#stone{
+    
+    background-image: url(image/stone.gif);
+    background-position: -15px -20px;
+    width: 74px;
+    height: 60px;
+    position: absolute;
+    top: 420px;
+    left: 800px;
+    animation: stoneAnimation 5.8s linear infinite;
+    
+    
+}
+
+.animateRun{
+    animation: run .6s steps(6) infinite;
+}
+
+.animateJump{
+    animation: jumpAnimation 1s steps(6);
+}
+
+
+@keyframes natureMove {
+    from {background-position-x: 0px;}
+    to{background-position-x: -1998px;}
+}
+@keyframes run {
+    from {background-position-x: -25px;}
+    to{background-position-x: -490px;}
+}
+@keyframes jumpAnimation {
+    0%{top:357px;background-position-x: -25px;}
+    33%{top:250px}
+    66%{top:250px}
+    100%{top:357px;background-position-x: -490px;}
+
+}
+@keyframes stoneAnimation {
+    from {left:800px;}
+    to {left:-150px}
+}
